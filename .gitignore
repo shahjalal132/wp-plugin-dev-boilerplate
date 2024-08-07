@@ -12,6 +12,9 @@
 # Local History for Visual Studio Code
 .history/
 
+# composer
+vendor
+
 # Built Visual Studio Code Extensions
 *.vsix
 
@@ -74,9 +77,6 @@ wp-config.php
 
 # Uploads
 /wp-content/uploads/
-
-# Log files
-*.log
 
 # htaccess
 /.htaccess
