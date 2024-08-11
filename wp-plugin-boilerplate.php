@@ -18,3 +18,15 @@
  * License URL: http://www.gnu.org/licenses/gpl-2.0.txt
  * text-domain: wp-plugin-boilerplate
  */
+
+defined( "ABSPATH" ) || exit( "Direct Access Not Allowed" );
+
+// Define plugin path
+if ( !defined( 'PLUGIN_BASE_PATH' ) ) {
+    define( 'PLUGIN_BASE_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+}
+
+// Define plugin url
+if ( !defined( 'PLUGIN_BASE_URL' ) ) {
+    define( 'PLUGIN_BASE_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+}
