@@ -44,7 +44,7 @@ require_once PLUGIN_BASE_PATH . '/inc/helpers/autoloader.php';
  * Load plugin text domain for internationalization.
  */
 function plugin_load_textdomain() {
-    load_plugin_textdomain( 'autoloader-plugin', false, basename( dirname( __FILE__ ) ) . '/languages' );
+    load_plugin_textdomain( 'wp-plugin-boilerplate', false, basename( dirname( __FILE__ ) ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'plugin_load_textdomain' );
 
