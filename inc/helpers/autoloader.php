@@ -82,4 +82,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\AUTOLOADER\Inc\Helpers\autoloader' );
+spl_autoload_register( '\BOILERPLATE\Inc\Helpers\autoloader' );
