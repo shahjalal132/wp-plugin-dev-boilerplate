@@ -26,7 +26,22 @@ if ( !defined( 'PLUGIN_BASE_PATH' ) ) {
     define( 'PLUGIN_BASE_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 }
 
-// Define plugin url
-if ( !defined( 'PLUGIN_BASE_URL' ) ) {
-    define( 'PLUGIN_BASE_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+// Define admin assets dir path
+if ( !defined( 'PLUGIN_ADMIN_ASSETS_DIR_PATH' ) ) {
+    define( 'PLUGIN_ADMIN_ASSETS_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/assets/admin' ) );
 }
+
+// Define plugin url
+if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
+    define( 'PLUGIN_PUBLIC_ASSETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/public' ) );
+}
+
+
+
+/**
+ * Load plugin text domain for internationalization.
+ */
+function plugin_load_textdomain() {
+    load_plugin_textdomain( 'autoloader-plugin', false, basename( dirname( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'plugin_load_textdomain' );
