@@ -36,7 +36,8 @@ if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
     define( 'PLUGIN_PUBLIC_ASSETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/public' ) );
 }
 
-
+// Require files
+require_once PLUGIN_BASE_PATH . '/loader.php';
 
 /**
  * Load plugin text domain for internationalization.
