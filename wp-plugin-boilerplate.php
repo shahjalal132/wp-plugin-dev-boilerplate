@@ -45,6 +45,19 @@ if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
 require_once PLUGIN_BASE_PATH . '/loader.php';
 require_once PLUGIN_BASE_PATH . '/inc/helpers/autoloader.php';
 
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in inc/classes/class-plugin-activator.php file
+ */
+function wpb_plugin_activator() {
+    require_once PLUGIN_BASE_PATH . '/inc/classes/class-plugin-activator.php';
+    Plugin_Activator::activate();
+}
+
+// Register activation hook
+register_activation_hook( __FILE__, 'wpb_plugin_activator' );
+
+
 function get_plugin_instance() {
     \BOILERPLATE\Inc\Autoloader::get_instance();
 }
