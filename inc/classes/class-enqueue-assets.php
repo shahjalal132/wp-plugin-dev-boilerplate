@@ -46,8 +46,10 @@ class Enqueue_Assets {
      */
     public function enqueue_public_assets() {
         // enqueue public css
+        wp_enqueue_style( "wpb-public-css", PLUGIN_PUBLIC_ASSETS_URL . "/css/public-style.css", [], false, "all" );
 
         // enqueue public js    
+        wp_enqueue_script( "wpb-public-js", PLUGIN_PUBLIC_ASSETS_URL . "/js/public-script.js", [], false, true );
     }
 
 }
