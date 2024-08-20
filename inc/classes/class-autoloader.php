@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstraps the plugin.
+ * Bootstraps the plugin. load class.
  */
 
 namespace BOILERPLATE\Inc;
@@ -13,6 +13,6 @@ class Autoloader {
     protected function __construct() {
 
         // load class.
-        
+        I18n::get_instance();
     }
 }

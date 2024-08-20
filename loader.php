@@ -7,3 +7,6 @@
  * @since             1.0.0
  * @package           wp-plugin-boilerplate
  */
+
+// include helper functions
+include_once PLUGIN_BASE_PATH . '/inc/helpers/helper-functions.php';
