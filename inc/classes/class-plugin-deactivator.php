@@ -11,7 +11,6 @@ class Plugin_Deactivator {
 
     public static function deactivate() {
         // Define your code here
-        echo "Plugin Deactivated";
     }
 
 }
