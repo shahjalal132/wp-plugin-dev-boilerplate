@@ -57,6 +57,18 @@ function wpb_plugin_activator() {
 // Register activation hook
 register_activation_hook( __FILE__, 'wpb_plugin_activator' );
 
+/**
+ * The code that runs during plugin deactivation.
+ * This action is documented in inc/classes/class-plugin-deactivator.php file
+ */
+function wpb_plugin_deactivator() {
+    require_once PLUGIN_BASE_PATH . '/inc/classes/class-plugin-deactivator.php';
+    Plugin_Deactivator::deactivate();
+}
+
+// Register deactivation hook
+register_deactivation_hook( __FILE__, 'wpb_plugin_deactivator' );
+
 
 function get_plugin_instance() {
     \BOILERPLATE\Inc\Autoloader::get_instance();

@@ -1,6 +1,6 @@
 # WP Plugin Boilerplate
 
-TODO: Activation plugin
+DONE: Activation plugin
 TODO: Deactivation plugin
 TODO: Enqueue Assets
 TODO: Admin Menu

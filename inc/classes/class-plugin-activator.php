@@ -11,7 +11,6 @@ class Plugin_Activator {
 
     public static function activate() {
         // Define your code here
-        echo 'Plugin Activated';
     }
 
 }
