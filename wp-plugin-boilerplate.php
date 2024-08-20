@@ -36,6 +36,11 @@ if ( !defined( 'PLUGIN_ADMIN_ASSETS_DIR_PATH' ) ) {
     define( 'PLUGIN_ADMIN_ASSETS_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/assets/admin' ) );
 }
 
+// Define plugin url
+if ( !defined( 'PLUGIN_ASSETS_DIR_URL' ) ) {
+    define( 'PLUGIN_ASSETS_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/admin' ) );
+}
+
 // Define plugin public assets url
 if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
     define( 'PLUGIN_PUBLIC_ASSETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/public' ) );
@@ -74,4 +79,5 @@ function get_plugin_instance() {
     \BOILERPLATE\Inc\Autoloader::get_instance();
 }
 
+// Load plugin
 get_plugin_instance();

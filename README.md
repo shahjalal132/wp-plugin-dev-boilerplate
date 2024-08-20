@@ -2,7 +2,7 @@
 
 DONE: Activation plugin
 DONE: Deactivation plugin
-TODO: Enqueue Assets
+DONE: Enqueue Assets
 TODO: Admin Menu
 TODO: Libs Directory
 TODO: Added helper functions
