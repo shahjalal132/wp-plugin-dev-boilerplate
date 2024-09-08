@@ -1,13 +1,7 @@
 <?php
 
 /**
- * 
- * The plugin bootstrap file
- * 
- * @link              https://github.com/mtmsujan
- * @since             1.0.0
- * @package           wp-plugin-boilerplate
- * 
+ *  
  * Plugin Name: WP Plugin Boilerplate
  * Plugin URI:  #
  * Author:      MTM Sujon
@@ -17,16 +11,18 @@
  * License:     GPL-2.0+
  * License URL: http://www.gnu.org/licenses/gpl-2.0.txt
  * text-domain: wp-plugin-boilerplate
+ * Domain Path: /languages
+ * 
  */
 
 defined( "ABSPATH" ) || exit( "Direct Access Not Allowed" );
 
-// Define plugin path
+// Define plugin base path
 if ( !defined( 'PLUGIN_BASE_PATH' ) ) {
     define( 'PLUGIN_BASE_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 }
 
-// Define plugin url
+// Define plugin base url
 if ( !defined( 'PLUGIN_BASE_URL' ) ) {
     define( 'PLUGIN_BASE_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 }
@@ -36,7 +32,7 @@ if ( !defined( 'PLUGIN_ADMIN_ASSETS_DIR_PATH' ) ) {
     define( 'PLUGIN_ADMIN_ASSETS_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/assets/admin' ) );
 }
 
-// Define plugin url
+// Define plugin admin assets url
 if ( !defined( 'PLUGIN_ASSETS_DIR_URL' ) ) {
     define( 'PLUGIN_ASSETS_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/admin' ) );
 }
@@ -44,6 +40,16 @@ if ( !defined( 'PLUGIN_ASSETS_DIR_URL' ) ) {
 // Define plugin public assets url
 if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
     define( 'PLUGIN_PUBLIC_ASSETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/public' ) );
+}
+
+// Define plugin libs dir path
+if ( !defined( 'PLUGIN_LIBS_DIR_PATH' ) ) {
+    define( 'PLUGIN_LIBS_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/inc/libs' ) );
+}
+
+// Define plugin libs url
+if ( !defined( 'PLUGIN_LIBS_DIR_URL' ) ) {
+    define( 'PLUGIN_LIBS_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/inc/libs' ) );
 }
 
 // Require files

@@ -16,6 +16,7 @@ class Template {
 
     public function setup_hooks() {
         // Actions and filters hooks
+        
     }
 
 }

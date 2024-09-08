@@ -5,6 +5,6 @@ DONE: Deactivation plugin
 DONE: Enqueue Assets
 TODO: Admin Menu
 TODO: Libs Directory
-TODO: Added helper functions
+DONE: Added helper functions
 TODO: Generate Directory structure
 TODO: Generate Readme file
