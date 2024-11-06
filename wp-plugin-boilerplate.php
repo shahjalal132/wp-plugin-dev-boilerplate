@@ -3,13 +3,11 @@
 /**
  *  
  * Plugin Name: WP Plugin Boilerplate
- * Plugin URI:  #
- * Author:      MTM Sujon
- * Author URI:  https://github.com/mtmsujan
+ * Plugin URI:  https://github.com/shahjalal132/wp-plugin-dev-boilerplate
+ * Author:      Shah jalal
+ * Author URI:  https://github.com/shahjalal132
  * Description: WordPress Plugin Boilerplate.
  * Version:     1.0.0
- * License:     GPL-2.0+
- * License URL: http://www.gnu.org/licenses/gpl-2.0.txt
  * text-domain: wp-plugin-boilerplate
  * Domain Path: /languages
  * 
