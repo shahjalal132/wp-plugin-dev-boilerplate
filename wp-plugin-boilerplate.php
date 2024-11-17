@@ -25,6 +25,11 @@ if ( !defined( 'PLUGIN_BASE_URL' ) ) {
     define( 'PLUGIN_BASE_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 }
 
+// Define plugin base name
+if ( !defined( 'PLUGIN_BASE_NAME' ) ) {
+    define( 'PLUGIN_BASE_NAME', plugin_basename( __FILE__ ) );
+}
+
 // Define admin assets dir path
 if ( !defined( 'PLUGIN_ADMIN_ASSETS_DIR_PATH' ) ) {
     define( 'PLUGIN_ADMIN_ASSETS_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/assets/admin' ) );
@@ -76,7 +81,7 @@ function wpb_plugin_deactivator() {
 }
 
 // Register deactivation hook
-register_deactivation_hook( __FILE__, 'wpb_plugin_deactivator' );
+// register_deactivation_hook( __FILE__, 'wpb_plugin_deactivator' );
 
 
 function get_plugin_instance() {
