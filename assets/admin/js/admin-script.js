@@ -15,7 +15,30 @@
     });
     // tab end
 
-    // toast start
+    // copy to clipboard start
+    $(".copy-button").on("click", function () {
+      // Get the text of the endpoint from the same row
+      const endpoint = $(this).closest("tr").find("td:first").text();
+
+      // Create a temporary input element to hold the text
+      const tempInput = $("<input>");
+      $("body").append(tempInput);
+      tempInput.val(endpoint).select();
+
+      // Copy the text to clipboard
+      document.execCommand("copy");
+
+      // Remove the temporary input element
+      tempInput.remove();
+
+      // show toast message
+      showToast({
+        type: "success",
+        timeout: 2000,
+        title: "Copied to clipboard",
+      });
+    });
+    // copy to clipboard end
 
     function showToast(config) {
       const { type, timeout, title } = config;
@@ -49,21 +72,7 @@
       }, timeout);
     }
 
-    // showToast({
-    //   type: "success",
-    //   timeout: 50000,
-    //   title: "Credentials saved successfully!",
-    // });
-
-    // showToast({
-    //   type: "error",
-    //   timeout: 50000,
-    //   title: "An error occurred!",
-    // });
-    // toast end
-
     // save credentials start
-
     $("#save_credentials").on("click", function () {
       const api_url = $("#api_url").val();
       const api_key = $("#api_key").val();
@@ -87,13 +96,13 @@
           if (true === response.success) {
             showToast({
               type: "success",
-              timeout: 3000,
+              timeout: 2000,
               title: `${response.data}`,
             });
           } else {
             showToast({
               type: "error",
-              timeout: 3000,
+              timeout: 2000,
               title: `${response.data}`,
             });
           }
@@ -104,7 +113,7 @@
 
           showToast({
             type: "error",
-            timeout: 3000,
+            timeout: 2000,
             title: `${response.data}`,
           });
         },
