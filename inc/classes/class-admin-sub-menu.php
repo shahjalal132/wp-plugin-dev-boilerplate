@@ -20,6 +20,7 @@ class Admin_Sub_Menu {
 
         // save api credentials
         add_action( 'wp_ajax_save_credentials', [ $this, 'save_api_credentials' ] );
+        add_action( 'wp_ajax_save_options', [ $this, 'save_options' ] );
     }
 
     public function save_api_credentials() {
@@ -35,6 +36,22 @@ class Admin_Sub_Menu {
         update_option( 'api_key', $api_key );
 
         wp_send_json_success( 'Credentials saved successfully!' );
+        die();
+    }
+
+    public function save_options() {
+
+        $option1 = sanitize_text_field( $_POST['option1'] );
+        $option2 = sanitize_text_field( $_POST['option2'] );
+
+        if ( empty( $option1 ) || empty( $option2 ) ) {
+            wp_send_json_error( 'An error occurred! Please fill all the fields.' );
+        }
+
+        update_option( 'option1', $option1 );
+        update_option( 'option2', $option2 );
+
+        wp_send_json_success( 'Options saved successfully!' );
         die();
     }
 
