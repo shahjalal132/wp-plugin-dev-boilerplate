@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #7881f8;
   --primary-light-color: #7c8aff;
@@ -78,7 +79,7 @@
   overflow: hidden !important;
 }
 
-.button-flex{
+.button-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,12 +185,11 @@
   background-color: #4351c1;
 }
 
-
 /* locader */
 .loader-spinner {
   width: 20px;
   height: 20px;
-  border: 2px dotted #FFF;
+  border: 2px dotted #fff;
   border-radius: 50%;
   display: inline-block;
   position: relative;
@@ -204,4 +204,4 @@
   100% {
     transform: rotate(360deg);
   }
-} 
+}

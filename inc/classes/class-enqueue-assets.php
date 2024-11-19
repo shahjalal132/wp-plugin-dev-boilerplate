@@ -38,6 +38,7 @@ class Enqueue_Assets {
 
             // enqueue admin css
             // wp_enqueue_style( "wpb-bootstrap", PLUGIN_ADMIN_ASSETS_DIR_URL . "/css/bootstrap.min.css", [], false, "all" );
+            wp_enqueue_style( "toast", PLUGIN_ADMIN_ASSETS_DIR_URL . "/css/toast.css", [], false, "all" );
             wp_enqueue_style( "wpb-admin-css", PLUGIN_ADMIN_ASSETS_DIR_URL . "/css/admin-style.css", [], time(), "all" );
 
             // enqueue admin js

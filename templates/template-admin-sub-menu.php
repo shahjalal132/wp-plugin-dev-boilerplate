@@ -2,6 +2,8 @@
 
 <div class="tab-container">
 
+    <div id="toast-container"></div>
+
     <div class="tabs-container common-shadow">
 
         <div class="tabs">
