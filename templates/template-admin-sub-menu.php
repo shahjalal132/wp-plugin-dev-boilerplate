@@ -8,7 +8,10 @@ $option2  = get_option( 'option2' );
 
 ?>
 
-<h2 class="admin-menu-title">Admin Sub Menu Contents</h2>
+<!-- <h2 class="admin-menu-title">Admin Sub Menu Contents</h2> -->
+<div class="page-heading-title">
+    <h1>Page Title</h1>
+</div>
 
 <div class="tab-container">
 
