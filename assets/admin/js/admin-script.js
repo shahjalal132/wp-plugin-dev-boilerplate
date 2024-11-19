@@ -49,17 +49,67 @@
       }, timeout);
     }
 
-    showToast({
-      type: "success",
-      timeout: 50000,
-      title: "Credentials saved successfully!",
-    });
+    // showToast({
+    //   type: "success",
+    //   timeout: 50000,
+    //   title: "Credentials saved successfully!",
+    // });
 
-    showToast({
-      type: "error",
-      timeout: 50000,
-      title: "An error occurred!",
-    });
+    // showToast({
+    //   type: "error",
+    //   timeout: 50000,
+    //   title: "An error occurred!",
+    // });
     // toast end
+
+    // save credentials start
+
+    $("#save_credentials").on("click", function () {
+      const api_url = $("#api_url").val();
+      const api_key = $("#api_key").val();
+
+      // add loading spinner
+      const loader_button = $(".spinner-loader-wrapper");
+      $(loader_button).addClass("loader-spinner");
+
+      $.ajax({
+        type: "POST",
+        url: wpb_admin_localize.ajax_url,
+        data: {
+          action: "save_credentials",
+          api_url: api_url,
+          api_key: api_key,
+        },
+        success: function (response) {
+          // remove loading spinner
+          $(loader_button).removeClass("loader-spinner");
+
+          if (true === response.success) {
+            showToast({
+              type: "success",
+              timeout: 3000,
+              title: `${response.data}`,
+            });
+          } else {
+            showToast({
+              type: "error",
+              timeout: 3000,
+              title: `${response.data}`,
+            });
+          }
+        },
+        error: function (xhr, status, error) {
+          // remove loading spinner
+          $(loader_button).removeClass("loader-spinner");
+
+          showToast({
+            type: "error",
+            timeout: 3000,
+            title: `${response.data}`,
+          });
+        },
+      });
+    });
+    // save credentials end
   });
 })(jQuery);
