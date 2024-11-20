@@ -179,7 +179,8 @@
   background-color: #4351c1;
 }
 
-.save-btn {
+.save-btn,
+.common-btn {
   background-color: var(--primary-color);
   color: var(--white-color);
   border: none;
@@ -190,11 +191,12 @@
   transition: background-color 0.3s ease;
 }
 
-.save-btn:hover {
+.save-btn:hover,
+.common-btn:hover {
   background-color: #4351c1;
 }
 
-/* locader */
+/* loader */
 .loader-spinner {
   width: 20px;
   height: 20px;

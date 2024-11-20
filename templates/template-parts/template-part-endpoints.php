@@ -11,13 +11,8 @@
         </thead>
         <tbody>
             <tr>
-                <td><?= $site_url ?>/users</td>
+                <td><?= $base_url ?>/users</td>
                 <td>Get all users</td>
-                <td><button class="copy-button">Copy</button></td>
-            </tr>
-            <tr>
-                <td><?= $site_url ?>/users/{id}</td>
-                <td>Get user by ID</td>
                 <td><button class="copy-button">Copy</button></td>
             </tr>
         </tbody>
