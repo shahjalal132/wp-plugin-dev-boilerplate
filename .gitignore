@@ -2,13 +2,13 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,wordpress
 
 ### VisualStudioCode ###
-.vscode/*
+# .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
-.vscode
+# .vscode
 
 # Local History for Visual Studio Code
 .history/
