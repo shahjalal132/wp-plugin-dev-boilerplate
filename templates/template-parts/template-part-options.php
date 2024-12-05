@@ -1,3 +1,10 @@
+<?php 
+
+$option1  = get_option( 'option1' );
+$option2  = get_option( 'option2' );
+
+?>
+
 <h4 class="common-title">Options</h4>
 
 <div class="options-wrapper">

@@ -1,3 +1,10 @@
+<?php 
+
+$api_url  = get_option( 'api_url' );
+$api_key  = get_option( 'api_key' );
+
+?>
+
 <h4 class="common-title">API Credentials</h4>
 
 <div class="credentials-wrapper overflow-hidden">
