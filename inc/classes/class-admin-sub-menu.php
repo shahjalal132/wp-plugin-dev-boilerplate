@@ -12,6 +12,7 @@ class Admin_Sub_Menu {
 
     public function __construct() {
         $this->setup_hooks();
+
     }
 
     public function setup_hooks() {
