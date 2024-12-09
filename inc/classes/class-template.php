@@ -13,8 +13,8 @@ class Template {
     use Credentials_Options;
 
     public function __construct() {
-        $this->setup_hooks();
         // $this->load_credentials_options();
+        $this->setup_hooks();
     }
 
     public function setup_hooks() {

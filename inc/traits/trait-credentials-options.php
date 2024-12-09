@@ -4,12 +4,12 @@ namespace BOILERPLATE\Inc\Traits;
 
 trait Credentials_Options {
 
-    protected $api_url;
-    protected $api_key;
-    protected $option1;
-    protected $option2;
+    private $api_url;
+    private $api_key;
+    private $option1;
+    private $option2;
 
-    protected function load_credentials_options() {
+    private function load_credentials_options() {
         // api credentials
         $this->api_url = get_option( 'api_url' );
         $this->api_key = get_option( 'api_key' );
