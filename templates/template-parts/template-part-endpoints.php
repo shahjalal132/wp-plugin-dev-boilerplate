@@ -17,8 +17,8 @@ $base_url = site_url() . '/wp-json/api/v1';
         </thead>
         <tbody>
             <tr>
-                <td><?= $base_url ?>/users</td>
-                <td>Get all users</td>
+                <td><?= $base_url ?>/health</td>
+                <td>Apis Health Check</td>
                 <td><button class="copy-button">Copy</button></td>
             </tr>
         </tbody>

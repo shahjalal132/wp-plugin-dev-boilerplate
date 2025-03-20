@@ -57,7 +57,7 @@ if ( !defined( 'PLUGIN_LIBS_DIR_URL' ) ) {
 
 // Define Page slug
 if ( !defined( 'PAGE_SLUG' ) ) {
-    define( 'PAGE_SLUG', 'jalal-settings' );
+    define( 'PAGE_SLUG', 'wpb-settings' );
 }
 
 // Require files
