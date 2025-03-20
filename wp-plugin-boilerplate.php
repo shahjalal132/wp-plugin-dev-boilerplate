@@ -55,6 +55,11 @@ if ( !defined( 'PLUGIN_LIBS_DIR_URL' ) ) {
     define( 'PLUGIN_LIBS_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/inc/libs' ) );
 }
 
+// Define Page slug
+if ( !defined( 'PAGE_SLUG' ) ) {
+    define( 'PAGE_SLUG', 'jalal-settings' );
+}
+
 // Require files
 require_once PLUGIN_BASE_PATH . '/loader.php';
 require_once PLUGIN_BASE_PATH . '/inc/helpers/autoloader.php';

@@ -52,7 +52,7 @@ class Admin_Sub_Menu {
     }
 
     function add_plugin_action_links( $links ) {
-        $settings_link = '<a href="admin.php?page=menu-slug2">' . __( 'Settings', 'wp-plugin-boilerplate' ) . '</a>';
+        $settings_link = '<a href="admin.php?page=' . PAGE_SLUG . '">' . __( 'Settings', 'wp-plugin-boilerplate' ) . '</a>';
         array_unshift( $links, $settings_link );
         return $links;
     }
@@ -63,7 +63,7 @@ class Admin_Sub_Menu {
             'Page Title',
             'Menu Title',
             'manage_options',
-            'menu-slug2',
+            PAGE_SLUG,
             [ $this, 'menu_callback_html' ],
         );
     }
