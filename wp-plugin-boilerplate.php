@@ -40,6 +40,11 @@ if ( !defined( 'PLUGIN_ADMIN_ASSETS_DIR_URL' ) ) {
     define( 'PLUGIN_ADMIN_ASSETS_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/admin' ) );
 }
 
+// Define plugin public assets path
+if ( !defined( 'PLUGIN_PUBLIC_ASSETS_PATH' ) ) {
+    define( 'PLUGIN_PUBLIC_ASSETS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/assets/public' ) );
+}
+
 // Define plugin public assets url
 if ( !defined( 'PLUGIN_PUBLIC_ASSETS_URL' ) ) {
     define( 'PLUGIN_PUBLIC_ASSETS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) . '/assets/public' ) );
